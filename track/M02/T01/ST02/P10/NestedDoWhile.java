@@ -4,6 +4,7 @@ public class NestedDoWhile {
     public static void main(String[] args) {
         int i = 1;
         do {
+
             int j = 1;
             do {
                 System.out.println(j);
@@ -12,5 +13,6 @@ public class NestedDoWhile {
             System.out.println();
             i++;
         } while (i <= 5);
+
     }
 }
