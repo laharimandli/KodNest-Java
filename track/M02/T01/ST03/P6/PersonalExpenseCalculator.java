@@ -1,7 +1,7 @@
 
 import java.util.Scanner;
 
-public class PersonalCalculator {
+public class PersonalExpenseCalculator {
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
