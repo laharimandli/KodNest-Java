@@ -33,6 +33,7 @@ class MethodDemo {
     int getLuckyNumber() {
         return 7;
     }
+    S
 
     int add(int first, int second) {
         return first + second;
