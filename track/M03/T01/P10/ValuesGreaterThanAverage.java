@@ -1,0 +1,30 @@
+
+import java.util.Scanner;
+
+public class ValuesGreaterThanAverage {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int size = sc.nextInt();
+        int[] arr = new int[size];
+
+        long sum = 0;
+        for (int i = 0; i < size; i++) {
+            arr[i] = sc.nextInt();
+            sum += arr[i];
+        }
+        double avg = (double) sum / size;
+        int count = 0;
+
+        for (int i = 0; i < size; i++) {
+            if (arr[i] > avg) {
+                count++;
+            }
+        }
+
+        System.out.println(count);
+
+        sc.close();
+    }
+}
