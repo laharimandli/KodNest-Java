@@ -9,6 +9,7 @@ class RotateArrayClockwise {
         int temp = a[a.length - 1];
         for (int i = 2; i >= 0; i--) {
             a[i + 1] = a[i];
+
         }
         a[0] = temp;
 
