@@ -18,13 +18,11 @@ public class SeparateEvenOdd {
         for (int i = 0; i < size / 2; i++) {
 
             if (arr[i] % 2 != 0 && arr[j] % 2 == 0) {
-                // Swap odd on left with even on right
                 int temp = arr[i];
                 arr[i] = arr[j];
                 arr[j] = temp;
                 j--;
-            } else if (arr[i] % 2 == 0) {
-                // Left is already even
+            } else if (arr[j] % 2 != 0) {
                 j--;
             }
         }
