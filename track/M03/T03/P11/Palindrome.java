@@ -30,7 +30,6 @@ public class Palindrome {
             i++;
             j--;
         }
-
         if (isPalindrome) {
             System.out.println(1);
         } else {
