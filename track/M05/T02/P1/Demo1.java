@@ -7,7 +7,7 @@ public class Demo1 {
     }
 }
 
-public class Demo {
+class Demo {
 
     int a = 10;
 
@@ -16,5 +16,5 @@ public class Demo {
     }
 }
 
-public class Demo2 extends Demo {
+class Demo2 extends Demo {
 }
