@@ -1,5 +1,5 @@
 
-class ConstructorChaining {
+class GlobalChaining {
 
     public static void main(String[] args) {
         Child c1 = new Child();
