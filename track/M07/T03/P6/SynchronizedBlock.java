@@ -22,33 +22,58 @@ class Hospital implements Runnable {
     public void run() {
         String threadName = Thread.currentThread().getName();
         if (threadName.equals("TOM")) {
-            treatment(threadName);
+            tomTreatment();
         } else {
-            treatment(threadName);
+            jerryTreatment();
         }
 
     }
 
-    void treatment(String threadName) {
+    void tomTreatment() {
         synchronized (res1) {
             try {
-                System.out.println(threadName + " using " + res1);
+                System.out.println("Tom using " + res1);
                 Thread.sleep(3000);
                 synchronized (res2) {
                     try {
-                        System.out.println(threadName + " using " + res2);
+                        System.out.println("TOM using " + res2);
                         Thread.sleep(3000);
 
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
                 }
-                System.out.println(threadName + " released using " + res2);
+                System.out.println("TOM released using " + res2);
 
             } catch (Exception e) {
                 e.printStackTrace();
             }
-            System.out.println(threadName + " released using " + res1);
+            System.out.println("TOM released using " + res1);
+
+        }
+
+    }
+
+    void jerryTreatment() {
+        synchronized (res2) {
+            try {
+                System.out.println("Jerry using " + res2);
+                Thread.sleep(3000);
+                synchronized (res1) {
+                    try {
+                        System.out.println("Jerry using " + res1);
+                        Thread.sleep(3000);
+
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                }
+                System.out.println("Jerry released using " + res1);
+
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            System.out.println("Jerry released using " + res2);
 
         }
 
